@@ -9,7 +9,9 @@
             <button type="submit">ADD</button>
         </form>
         <ul>
-            <li>Item 1</li>
+            <% todo_data.forEach(function (x) { %>
+                <li><%= x.item %></li>
+            <% }); %>
         </ul>
     </body>
 </html>
