@@ -1,6 +1,6 @@
 module.exports = function (app) {
     app.get("/todo",function (req,res) {
-        res.send("Todo");
+        res.render("todo");
     });
     app.post("/todo",function (req,res) {
 
