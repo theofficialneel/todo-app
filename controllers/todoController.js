@@ -1,6 +1,21 @@
 let data = [{item: "Hello world"}];
+let mongoose = require("mongoose");
 let bodyParser = require("body-parser");
 let urlParser = bodyParser.urlencoded({extended: false});
+
+mongoose.connect("mongodb://127.0.0.1/todo_db", {useNewUrlParser: true });
+let todoSchema = new mongoose.Schema({
+    item: String
+});
+let Todo = mongoose.model("Todocollection",todoSchema);
+
+let item1 = Todo({
+    item: "Hey"
+}).save(function (err) {
+    if(err)
+        throw err;
+    console.log("Saved to db");
+});
 
 module.exports = function (app) {
     app.get("/todo",function (req,res) {
