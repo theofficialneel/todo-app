@@ -1,5 +1,21 @@
 body{
     background-color: black;
     color: white;
-    font-family: fantasy;
+    font-family: monospace;
+}
+h1,form{
+    text-align: center;
+    font-size: 30px;
+}
+form input{
+    text-align: center;
+    width: 30%;
+}
+form button{
+    width: 10%;
+}
+ul{
+    text-align: center;
+    font-size: 20px;
+    list-style: none;
 }
